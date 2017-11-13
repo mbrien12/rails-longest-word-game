@@ -11,6 +11,14 @@ class WordsController < ApplicationController
       count += 1
       @grid << ("a".."z").to_a.sample
     end
+
+    session[:games] ||= 0
+    session[:games] += 1
+  end
+
+  def new
+    session[:games] ||= 0
+    session[:games] += 1
   end
 
 
@@ -47,7 +55,7 @@ class WordsController < ApplicationController
 
 
     if validate_word_grid(@attempt, @grid) == false
-      @message = "not in the grid!"
+      @message = "Not in the grid!"
       @score = 0
     elsif validate_word_api(@attempt) == false
       @message = "Not an english word"
@@ -62,4 +70,7 @@ class WordsController < ApplicationController
       @score = @attempt.split('').map { |letter| @score += 10 }.inject(:+)
     end
   end
+
+
+
 end

@@ -13,3 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+message = document.getElementById("message")
+
+if (message.innerText === "Well done!") {
+  message.classList.add("correct");
+} else {
+  message.classList.add("wrong");
+};
+
+
+

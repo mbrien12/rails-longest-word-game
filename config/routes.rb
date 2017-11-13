@@ -3,6 +3,8 @@ RailsLongestWordGame::Application.routes.draw do
 
   get "score", to: "words#score"
 
+  get "new", to: "new#game"
+
 
 
 

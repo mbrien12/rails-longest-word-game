@@ -1,3 +1,39 @@
 // Place all the styles related to the words controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.attempt {
+  color: gray;
+}
+
+a {
+  text-decoration: none;
+  border: solid 1px gray;
+  padding: 10px;
+  border-radius: 4px;
+  color: gray;
+  margin-top: 50px;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrong {
+  color: red;
+}
+
+.correct {
+  color: green;
+}

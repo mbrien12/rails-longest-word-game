@@ -1,10 +1,13 @@
+<div class="container">
+
 <h1>RESULTS</h1>
-
-<h2>******** Now your results ********</h2>
-<p>Your word: <%= @attempt %></p>
-<% if @score > 0 %>
-  <p>Time taken to answer: <%= @time %> seconds</p>
-<% end %>
-<p>Your score: <%= @score %> </p>
-<p>Message is <%= @message %></p>
-
+<h2>score: <%= @score %></h2>
+  <p class="attempt">Your attempt: <%= @attempt %></p>
+  <% if @score > 0 %>
+    <p>Time taken to answer: <%= @time %> seconds</p>
+  <% end %>
+  <p id="message"><%= @message %></p>
+  <p> Number of games played: <%= session[:games] %></p>
+    <%= link_to "Reset game", words_path %>
+    <%= link_to "Play again", words_path %>
+</div>
