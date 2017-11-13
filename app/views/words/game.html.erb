@@ -1,11 +1,12 @@
 <h1>Play the awesome words game!</h1>
 
 <h2>Here is your grid....</h2>
-<p><%= @grid %></p>
+<h3><%= @grid %></h3>
 
-<h2>What is your longest word?</h2>
+<p>What is your longest word?</p>
 <form action="/score">
-  <input type="text" id="answer" name="answer" placeholder="Enter word">
+  <input type="text" id="answer" name="attempt" placeholder="Enter word">
   <input type="Submit" value="Submit word!">
   <input type="hidden" name="start_time" value="<%=Time.now %>">
+  <input type="hidden" name="grid" value="<%= @grid %>">
 </form>

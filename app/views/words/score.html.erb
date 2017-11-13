@@ -1,8 +1,10 @@
 <h1>RESULTS</h1>
 
 <h2>******** Now your results ********</h2>
-<p>Your word: <%= @answer %></p>
-<p>Time taken to answer: <%= @time %> seconds</p>
+<p>Your word: <%= @attempt %></p>
+<% if @score > 0 %>
+  <p>Time taken to answer: <%= @time %> seconds</p>
+<% end %>
 <p>Your score: <%= @score %> </p>
 <p>Message is <%= @message %></p>
 
