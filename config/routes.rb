@@ -1,7 +1,11 @@
 RailsLongestWordGame::Application.routes.draw do
-  get "words/game"
+  get "words", to: "words#game"
 
-  get "words/score"
+  get "score", to: "words#score"
+
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
